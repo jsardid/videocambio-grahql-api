@@ -1,0 +1,35 @@
+type Query {
+  movie(tmdb_id: String!): Movie
+  movies: [Movie!]!
+}
+
+type Movie {
+  tmdb_id: String!
+  tmdb_title: String!
+  tmdb_original_title: String
+  tmdb_overview: String
+  tmdb_popularity: Int
+  tmdb_vote_average: Int
+  tmdb_vote_count: Int
+  tmdb_backdrop_path: String
+  tmdb_poster_path: String
+  tmdb_release_date: String
+  tmdb_runtime: String
+  tmdb_cast: [Cast!]
+  tmdb_videos: [Video!]
+  custom_popular: Boolean!
+  custom_new_release: Boolean!
+  custom_recently_added: Boolean!
+}
+
+type Cast {
+  tmdb_name: String!
+  tmdb_character: String
+  tmdb_profile_path: String
+}
+
+type Video {
+  tmdb_name: String!
+  tmdb_character: String
+  tmdb_profile_path: String
+}
