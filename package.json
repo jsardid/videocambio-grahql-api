@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jsardid/videocambio-grahql-api#readme",
   "dependencies": {
-    "graphql-yoga": "^1.13.1"
+    "graphql-yoga": "^1.13.1",
+    "mongoose": "^5.1.1"
   }
 }
