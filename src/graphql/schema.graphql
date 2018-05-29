@@ -1,6 +1,6 @@
 type Query {
   movie(tmdb_id: String!): Movie
-  movies: [Movie!]!
+  movies(limit: Int, offset: Int, title: String, sortBy: String): [Movie!]!
 }
 
 type Movie {
