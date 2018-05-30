@@ -3,6 +3,10 @@ type Query {
   movies(limit: Int, offset: Int, title: String, sortBy: String): [Movie!]!
 }
 
+type Mutation {
+  createTransaction(movies_list: [Int]): Transaction!
+}
+
 type Movie {
   tmdb_id: String!
   tmdb_title: String!
@@ -32,4 +36,14 @@ type Video {
   tmdb_name: String!
   tmdb_character: String
   tmdb_profile_path: String
+}
+
+type Transaction {
+  id: String!
+  status: String
+  total_items: Int
+  processed_items: Int
+  error_items: Int
+  success_items: Int
+  createdAt: String
 }

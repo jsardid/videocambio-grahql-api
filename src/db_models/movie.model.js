@@ -39,7 +39,8 @@ const MovieSchema = mongoose.Schema(
     ]
   },
   {
-    timestamps: true
+    timestamps: true,
+    collection : 'movies' 
   }
 );
 

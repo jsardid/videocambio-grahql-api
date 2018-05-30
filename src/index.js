@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const dbConfig = require("../config/database.config.js");
 const { GraphQLServer } = require("graphql-yoga");
 const Query = require('./graphql/resolvers/Query')
-const Movie = require('./graphql/resolvers/Movie')
+const Mutation = require('./graphql/resolvers/Mutation')
 
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.url);
@@ -18,7 +18,7 @@ mongoose.connection.once("open", () => {
 
 const resolvers = {
   Query,
-  Movie
+  Mutation
 }
 
 const server = new GraphQLServer({
